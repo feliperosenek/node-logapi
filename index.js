@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 export default function log(logtype, message, info, pipe, urlLog) {
     var timedate = new Date()
     var dataLog = JSON.stringify({
