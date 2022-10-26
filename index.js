@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-exports.log = async function log(logtype, message, info, pipe, urlLog) {
+exports.log = function log(logtype, message, info, pipe, urlLog) {
     var timedate = new Date()
     var dataLog = JSON.stringify({
         "logtype": logtype,
@@ -15,5 +15,5 @@ exports.log = async function log(logtype, message, info, pipe, urlLog) {
         },
         body: dataLog
     };
-    await fetch(urlLog, sendlog)
+    fetch(urlLog, sendlog)
 }
